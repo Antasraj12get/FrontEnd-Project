@@ -14,13 +14,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 1rem;
 }
 
 .container {
   background: #1e1e1e;
   padding: 2rem;
   border-radius: 12px;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   text-align: center;
@@ -38,7 +39,8 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.mid button, .mid input {
+.mid button,
+.mid input {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
@@ -79,4 +81,44 @@ body {
   border-radius: 5px;
   font-size: 0.95rem;
   color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .mid {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .mid button, .mid input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .lower {
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container h1 {
+    font-size: 1.3rem;
+  }
+
+  .mid button, .mid input {
+    font-size: 0.95rem;
+  }
+
+  .lower div {
+    font-size: 0.85rem;
+  }
 }
